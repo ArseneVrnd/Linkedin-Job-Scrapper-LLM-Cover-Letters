@@ -44,14 +44,16 @@ py main.py
 
 The script will prompt you for:
 1. **Groq API Key** (first step - required)
-2. LinkedIn email and password
-3. Job title(s) - can enter multiple separated by commas (e.g., "Software Engineer, Data Scientist")
-4. Location (e.g., "New York, NY")
-5. Maximum results per title (default: 50)
-6. Your base cover letter template (will be adapted for each job)
-7. Optional: Additional context (achievements, company research, motivation)
-8. Optional: Current CV "About Me" section
+2. **Entire CV** (paste your complete CV)
+3. Your base cover letter template (will be adapted for each job)
+4. Optional: Additional context (achievements, company research, motivation)
+5. Job title(s) - can enter multiple separated by commas (e.g., "Software Engineer, Data Scientist")
+6. Location (e.g., "New York, NY")
+7. Maximum results per title (default: 50)
+8. LinkedIn email and password
 9. Export options
+
+**Note**: If LinkedIn shows a captcha during login, the script will pause and ask you to resolve it manually in the browser.
 
 ### Programmatic Usage
 
@@ -111,6 +113,8 @@ Edit `config.py` to customize:
 
 ⚠️ **Cover Letter Template**: You must provide a base cover letter template. The AI will adapt this template for each job, so make sure it contains your relevant experience and skills.
 
+⚠️ **Captcha Handling**: If LinkedIn requires a captcha during login, the script will detect it and pause for you to resolve it manually in the browser window.
+
 ## Troubleshooting
 
 ### ChromeDriver Issues
@@ -123,6 +127,7 @@ If you encounter ChromeDriver issues:
 - Make sure your LinkedIn credentials are correct
 - LinkedIn may require 2FA - you may need to handle this manually
 - Some accounts may be flagged for automated access
+- **Captcha**: If a captcha appears, the script will pause and wait for you to complete it manually
 
 ### API Issues
 - Verify your Groq API key is correct
